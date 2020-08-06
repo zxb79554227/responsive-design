@@ -1,0 +1,29 @@
+@import url('./global.scss');
+@import url('./general/mini.scss') screen and (max-width:600px);
+@import url('./general/small.scss') screen and (min-width: 601px) and (max-width: 960px);
+@import url('./general/medium.scss') screen and (min-width:961px) and (max-width: 960px);
+@import url('./general/large.scss') screen and (min-width: 961px) and (max-width: 1264px);
+@import url('./general/4k.scss') screen and(min-width:1921px);
+/* iphone 3 */
+@import url('./iphone/iphone3.scss') only screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1);
+
+/* iphone 4 */
+@import url('./iphone/iphone4.scss') only screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2);
+
+/* iphone 5 */
+@import url('./iphone/iphone5.scss') only screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2);
+
+/* iphone 6, 6s, 7, 8 */
+@import url('./iphone/iphone6-8.scss') only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2);
+
+/* iphone 6+, 6s+, 7+, 8+ */
+@import url('./iphone/iphonePlus6-8.scss') only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3);
+
+/* iphone X , XS, 11 Pro */
+@import url('./iphone/iphonex.scss') only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3);
+
+/* iphone XR, 11 */
+@import url('./iphone/iphonexr.scss') only screen and (device-width : 414px) and (device-height : 896px) and (-webkit-device-pixel-ratio : 2);
+
+/* iphone XS Max, 11 Pro Max */
+@import url('./iphone/iphone11.scss') only screen and (device-width : 414px) and (device-height : 896px) and (-webkit-device-pixel-ratio : 3);
