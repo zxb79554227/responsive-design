@@ -1,15 +1,18 @@
 <template>
-    <div>
+    <v-app>
+      <desk-nav-bar></desk-nav-bar>
       <layout></layout>
-    </div>
+    </v-app>
 </template>
 
 <script>
 import layout from './views/index.vue'
+import desknav from './components/deskNavBar'
 export default {
   name: 'App',
   components: {
-    layout
+    layout,
+    'desk-nav-bar':desknav
   }
 }
 </script>

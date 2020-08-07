@@ -6,6 +6,8 @@ import "@/mixins/gb"
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
+import 'vuetify/dist/vuetify.min.css'
+import './style/main.scss'
 
 Vue.config.productionTip = false
 

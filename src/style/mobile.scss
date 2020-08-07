@@ -1,0 +1,7 @@
+$layout-breakpoint-mobile: 600px;
+
+@media (max-width: $layout-breakpoint-mobile) {
+    .box-three {
+        background-color: blue;
+    }
+}
