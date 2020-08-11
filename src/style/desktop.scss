@@ -1,3 +1,16 @@
 $layout-breakpoint-mobile: 2480px;
 
-@media (max-width: $layout-breakpoint-mobile) {}
+@media (max-width: $layout-breakpoint-mobile) {
+    .content-box {
+        width: calc(100% - 300px);
+        float: right
+    }
+
+    .login {
+        .login-card {
+            .v-text-field input {
+                letter-spacing: 1.25px;
+            }
+        }
+    }
+}

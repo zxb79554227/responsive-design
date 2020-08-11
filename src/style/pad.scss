@@ -1,7 +1,8 @@
 $layout-breakpoint-mobile: 960px;
 
 @media (max-width: $layout-breakpoint-mobile) {
-    .box-three {
-        background-color: green;
+    .content-box {
+        width: calc(100% - 300px);
+        float: right
     }
 }

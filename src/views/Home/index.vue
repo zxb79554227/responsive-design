@@ -1,10 +1,23 @@
 <template>
-  <div>123123</div>
+      <div>
+        <desk-nav-bar></desk-nav-bar>
+        <v-main>
+          <layout class="content-box"></layout>
+        </v-main>
+      </div>
 </template>
 
 <script>
-export default {
 
+import desknav from '../../components/deskNavBar'
+export default {
+  name:'home',
+  components: {
+    'desk-nav-bar':desknav
+  },
+  mounted(){
+    
+  }
 }
 </script>
 
