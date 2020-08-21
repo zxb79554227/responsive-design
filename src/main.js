@@ -6,6 +6,7 @@ import "@/mixins/gb"
 import router from './router'
 import store from './store'
 import { gsap } from 'gsap'
+import VueCookies from 'vue-cookies'
 import { TextPlugin } from "gsap/TextPlugin";
 import vuetify from './plugins/vuetify'
 import 'vuetify/dist/vuetify.min.css'
@@ -15,7 +16,7 @@ Vue.config.productionTip = false
 gsap.registerPlugin(TextPlugin)
 Vue.prototype.gsap = gsap
 
-
+Vue.use(VueCookies)
 Vue.use(VueAxios, axios)
 
 new Vue({
