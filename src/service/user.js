@@ -4,8 +4,13 @@ const userSverice = {
         method:'post',
         authorization : false
     },
-    SMG_GET:{
+    SEND_CODE:{
         path:'/backend/send/sms',
+        method:'post',
+        authorization : false 
+    },
+    USER_LOGIN:{
+        path:'/v1/user/login',
         method:'post',
         authorization : false 
     }

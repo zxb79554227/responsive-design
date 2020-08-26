@@ -5,6 +5,7 @@ import VueAxios from 'vue-axios'
 import "@/mixins/gb"
 import router from './router'
 import store from './store'
+import { appService,exploreService } from './service/api'
 import { gsap } from 'gsap'
 import VueCookies from 'vue-cookies'
 import { TextPlugin } from "gsap/TextPlugin";
@@ -15,6 +16,8 @@ import './style/main.scss'
 Vue.config.productionTip = false
 gsap.registerPlugin(TextPlugin)
 Vue.prototype.gsap = gsap
+Vue.prototype.appService = appService
+Vue.prototype.exploreService = exploreService
 
 Vue.use(VueCookies)
 Vue.use(VueAxios, axios)

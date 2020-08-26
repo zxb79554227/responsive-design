@@ -3,7 +3,7 @@ const Snack = {
   state: () => ({
     color:'defualt',
     content:'这是个弹窗',
-    timeout:5000,
+    timeout:2500,
     toggle:false
   }),
   mutations: {

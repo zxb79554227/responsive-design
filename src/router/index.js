@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueCookies from 'vue-cookies'
 
+Vue.use(VueCookies)
 Vue.use(VueRouter)
 
 const routes = [
@@ -22,7 +24,29 @@ const routes = [
   {
     path:'/home',
     name:'home',
-    component:()=> import('@/views/Home')
+    component:()=> import('@/views/Home'),
+    children:[
+      {
+        path: 'wallet',
+        name:'wallet',
+        component:()=> import('../views/Home/Wallet')
+      },
+      {
+        path: 'explore',
+        name:'explore',
+        component:()=> import('../views/Home/Explore')
+      },
+      {
+        path: 'market',
+        name:'market',
+        component:()=> import('../views/Home/Market')
+      },
+    ]
+  },
+  {
+    path:'/home/wallet/:id',
+    name:'coinInfo',
+    component:()=> import('@/views/Home/Wallet/id')
   }
 ]
 
@@ -33,9 +57,9 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to,from,next) => {
-  console.log(sessionStorage.token)
-  let isAuthenticated = sessionStorage.token
-  if (to.name !== 'login' && !isAuthenticated) next({ name: 'login' })
+  let token = VueCookies.get('token')
+  console.log(token)
+  if (to.name !== 'login' && !token) next({ name: 'login' })
   else next()
 })
 
